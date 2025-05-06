@@ -53,7 +53,7 @@ const Tictactoe = () => {
 
   return (
     <div>
-      <h1>Tic-Tac-Toe game!</h1>
+      <h1>Tic-Tac-Toe game in react-js!</h1>
       <div className="container">
 
   {board.map((value, index) => (
