@@ -5,6 +5,7 @@ const Tictactoe = () => {
     const [isX, setIsX] = useState(true);
 
     const handlerbtn = (index)=>{
+        if (board[index] || winner) return; 
         const newboard = [...board];
 
         if (newboard[index] === null) {
@@ -30,6 +31,8 @@ const Tictactoe = () => {
             [0, 3, 6], [1, 4, 7], [2, 5, 8], 
             [0, 4, 8], [2, 4, 6]   
         ]
+
+    
         
         for(let element of winnercombo){
             const [a,b,c] = element
@@ -66,9 +69,6 @@ winner && <h3>🎉 Congratulation! {winner} is the winner!</h3>}
 {!winner && !board.includes(null) && <h3>😐 It's a draw!</h3>}
 
 <button onClick={() => resetbtn()}>Reset game!</button>
-
-
-
       
     </div>
   )
